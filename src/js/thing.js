@@ -26,8 +26,6 @@ function update() {
 }
 
 function init () {
-
-
     // Mousedown triggers before the range control is updated, so let's defer a browser tick. You'd think that change
     // would trigger here, but nope.
     range.addEventListener('mousedown', function() { setTimeout(update, 1); });
@@ -44,11 +42,11 @@ function init () {
 var throttleRender = throttle(fm.resize, 250);
 
 $(document).ready(function () {
-  $(window).resize(throttleRender);
    range = document.getElementById('range');
    reset = document.getElementById('reset');
    a = document.getElementById('a');
    b = document.getElementById('b');
    c = document.getElementById('c');
+  $(window).resize(throttleRender);
   init();
 });
