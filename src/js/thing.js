@@ -23,6 +23,7 @@ function update() {
         b.style.opacity = 1;
         c.style.opacity = ease(((val - 50) / 50));
     }
+    fm.resize();
 }
 
 function init () {

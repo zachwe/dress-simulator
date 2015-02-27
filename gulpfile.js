@@ -62,9 +62,9 @@ gulp.task("browserify", ["preprocess"], function () {
     entries: [config.paths.tmp.js + "/main.js"]
   });
 
-  if (isProd && !args["dont-minify"]) {
+  /*if (isProd && !args["dont-minify"]) {
     bundler.transform({ global: true }, "uglifyify");
-  }
+  }*/
 
   return bundler
     .bundle({debug: !isProd})
