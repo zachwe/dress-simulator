@@ -1,0 +1,15 @@
+
+<h2>Opinionated Dress Color Simulation</h2>
+<p>by <a href="http://grack.com">Matt Mastracci</a> (<a href="https://github.com/mmastrac/dress-simulator">fork me on GitHub!</a>)</a></p>
+
+p Slide the control from side-to-side to fade between the three images: a "blue/black" version where we subtract out the theoretical color of the light (#524922), the original picture, and a "white/gold" version where we add color to compensate for the perceived shadow (#392c00).
+
+span Blue/Black 
+    input(type="range" id="range" min="0" max="100" value="50")
+      | White/Gold 
+      button(id="reset") Reset
+
+div(class="container")
+  img(id="a" src="/assets/a.jpg?1")
+  img(id="b" src="/assets/b.jpg?1")
+  img(id="c" src="/assets/c.jpg?1")
